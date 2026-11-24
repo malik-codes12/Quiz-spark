@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Quiz Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+    </div>
+
+    <main class="container">
+
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+
+            <div class="logo">✦</div>
+
+            <p class="tagline">WELCOME TO THE CHALLENGE</p>
+
+            <h1>NEON <span>QUIZ</span></h1>
+
+            <p class="description">
+                Challenge your brain, test your knowledge
+                and become a quiz champion!
+            </p>
+
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>10</h3>
+                    <p>Questions</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>15s</h3>
+                    <p>Per Question</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>100%</h3>
+                    <p>Fun</p>
+                </div>
+            </div>
+
+            <button id="start-btn" class="main-btn">
+                <!--Difficulty Level Selection-->
+                <div class="difficulty-selection">
+                    <h3>SELECT DIFFICULTY</h3>
+                    <div class="level-buttons">
+                        <button class="level-btn" data-level="easy">Easy</button>
+                        <button class="level-btn" data-level="medium">Medium</button>
+                        <button class="level-btn" data-level="hard">Hard</button>
+                    </div>
+                </div>
+                START QUIZ →
+            </button>
+
+            <p class="bottom-text">
+                LET'S TEST YOUR KNOWLEDGE
+            </p>
+
+        </section>
+
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+
+            <div class="quiz-header">
+
+                <div>
+                    <p class="small-title">YOUR CHALLENGE</p>
+                    <h2>QUIZ TIME</h2>
+                </div>
+
+                <div class="timer-box">
+                    <span>⏱</span>
+                    <span id="timer">15</span>
+                </div>
+
+            </div>
+
+            <div class="progress-info">
+                <span id="question-count">QUESTION 1 / 10</span>
+                <span id="live-score">SCORE: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+
+                <p class="question-label">ANSWER THE QUESTION</p>
+
+                <h2 id="question-text">
+                    Question appears here
+                </h2>
+
+            </div>
+
+            <div id="options-container" class="options"></div>
+
+            <p id="feedback" aria-live="polite"></p>
+
+            <button id="next-btn" class="main-btn" disabled>
+                NEXT QUESTION →
+            </button>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+
+            <div id="celebration-icon" class="result-icon">
+                🏆
+            </div>
+
+            <p class="tagline">CHALLENGE COMPLETED</p>
+
+            <h1>YOUR <span>RESULT</span></h1>
+
+            <div class="score-circle">
+                <div>
+                    <h2 id="score">0/10</h2>
+                    <p>YOUR SCORE</p>
+                </div>
+            </div>
+
+            <h2 id="percentage">0%</h2>
+
+            <p id="performance-message"></p>
+
+            <div class="result-stats">
+                <div>
+                    <h3 id="correct-count">0</h3>
+                    <p>Correct</p>
+                </div>
+
+                <div>
+                    <h3 id="wrong-count">0</h3>
+                    <p>Incorrect</p>
+                </div>
+            </div>
+
+            <div id="answer-review"></div>
+
+            <button id="restart-btn" class="main-btn">
+                ↻ PLAY AGAIN
+            </button>
+
+        </section>
+
+        <footer>
+            MADE WITH ♥ USING HTML CSS & JAVASCRIPT
+        </footer>
+
+    </main>
+
+    <!-- Celebration Particles -->
+    <div id="confetti-container"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
